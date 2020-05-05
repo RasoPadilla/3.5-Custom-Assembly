@@ -1,4 +1,4 @@
- ;Programa 8
+ ;Programa 8 Determinar si un numero dado es un multiplo de 6
 DISPLAY_MODE = LCD_CMD_DISPLAY | LCD_CMD_DISPLAY_ON | LCD_CMD_DISPLAY_CURSOR | LCD_CMD_DISPLAY_CURSOR_BLINK
 lcc #LCD_INITIALIZE
 lcc #DISPLAY_MODE

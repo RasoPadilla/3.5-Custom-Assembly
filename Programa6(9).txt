@@ -1,4 +1,4 @@
- ;Programa 9
+ ;Programa 9 Introducir y determinar si es "Par" o "Impar" 
 DISPLAY_MODE = LCD_CMD_DISPLAY | LCD_CMD_DISPLAY_ON | LCD_CMD_DISPLAY_CURSOR | LCD_CMD_DISPLAY_CURSOR_BLINK
 lcc #LCD_INITIALIZE
 lcc #DISPLAY_MODE

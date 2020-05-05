@@ -1,4 +1,4 @@
- ;Programa 18
+ ;Programa 18 Encontrar la suma de 35 enteros
  numeroComparar = 256
  numeroSumar = 1
  

@@ -1,4 +1,4 @@
- ; Programa 3
+ ; Programa 3 Imprimir los enteros pares del 2 al 48
 numero1= 2
 numero2 = 48
 

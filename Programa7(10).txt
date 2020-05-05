@@ -1,4 +1,4 @@
- ;Programa 10
+ ;Programa 10 Escribir un programa quie acepte 25 enteros positivos como datos y describe cada uno como "impar o par"
 DISPLAY_MODE = LCD_CMD_DISPLAY | LCD_CMD_DISPLAY_ON | LCD_CMD_DISPLAY_CURSOR | LCD_CMD_DISPLAY_CURSOR_BLINK
 lcc #LCD_INITIALIZE
 lcc #DISPLAY_MODE

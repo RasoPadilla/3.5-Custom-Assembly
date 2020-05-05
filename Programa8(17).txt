@@ -1,4 +1,4 @@
- ;Programa 17
+ ;Programa 17 Calcular e imprimir la suma de los enteros del 1 al 20 
 numero1 = 0
 numero2 = 20
 

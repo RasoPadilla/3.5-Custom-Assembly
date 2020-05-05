@@ -1,4 +1,4 @@
- ;Programa 19
+ ;Programa 19 Encontrar la suma de los enteros del 1 al 1000.
  numeroComparar = 256
  numeroSumar = 1
  

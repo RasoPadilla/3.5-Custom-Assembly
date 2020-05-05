@@ -1,4 +1,4 @@
- ;Programa 1
+ ;Programa 1 Imprimir Los enteros del 9 al 43
 numero1= 8
 numero2 = 43
 
