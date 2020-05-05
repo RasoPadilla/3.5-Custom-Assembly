@@ -1,5 +1,5 @@
  ;Programa 18 Encontrar la suma de 35 enteros
- numeroComparar = 256
+ numeroComparar = 36
  numeroSumar = 1
  
 	mov Rb, numeroSumar
