@@ -1,0 +1,18 @@
+ ;Programa 19
+ numeroComparar = 256
+ numeroSumar = 1
+ 
+	mov Rb, numeroSumar
+	mov Rc, 0
+	mov Ra, 0
+	
+	
+.main:
+	data Rb, numeroSumar
+	mov Rd, Ra
+	add Ra
+	inc Rc
+	data Rb, numeroComparar
+	cmp Rc
+	jnz .main
+	hlt

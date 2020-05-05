@@ -1,0 +1,13 @@
+ ;Programa 1
+numero1= 8
+numero2 = 43
+
+	data Ra, numero1
+	data Rb, numero2
+	
+.main:
+	inc Ra
+	mov Rd, Ra
+	cmp Ra, Rb
+	jnz .main
+	hlt

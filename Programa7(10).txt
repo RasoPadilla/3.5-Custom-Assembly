@@ -1,0 +1,55 @@
+ ;Programa 10
+DISPLAY_MODE = LCD_CMD_DISPLAY | LCD_CMD_DISPLAY_ON | LCD_CMD_DISPLAY_CURSOR | LCD_CMD_DISPLAY_CURSOR_BLINK
+lcc #LCD_INITIALIZE
+lcc #DISPLAY_MODE
+
+	mov Rc, 25
+	mov Ra, 2
+	mov Rd, 1
+
+.start:	
+  	lcc #LCD_CMD_CLEAR
+	inc Rd
+	mov Ra, Rd
+	jnz .main
+	hlt
+	
+.main:
+	mov Rb, 2
+	sub Ra
+	tst Ra
+	jz .par
+	jn .impar
+	jnz .main
+	hlt
+
+.par: 
+  data Ra, textopar
+  call printStr
+  cmp Rc
+  jnz .start
+  hlt
+  
+.impar: 
+  data Ra, textoimpar
+  call printStr
+  cmp Rc
+  jnz .start
+  hlt
+
+textopar: #str "Par\0"
+	
+textoimpar: #str "Impar\0"
+	
+printStr:
+  mov Rc, Ra
+  .nextChar:
+    lod Ra, Rc
+    tst Ra
+	jz ret
+    lcd Ra
+	inc Rc
+    jmp .nextChar
+
+ret:
+	ret

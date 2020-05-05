@@ -1,0 +1,17 @@
+ ;Programa 17
+numero1 = 0
+numero2 = 20
+
+	data Rb, numero2
+	data Rc, numero1
+	data Ra, numero1
+	
+.main:
+	inc Rc
+	mov Rb, Rc
+	add Ra
+	mov Rd, Ra
+	mov Rb, numero2	
+	cmp Rb, Rc
+	jnz .main
+	hlt

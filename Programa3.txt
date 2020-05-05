@@ -1,0 +1,15 @@
+ ; Programa 3
+numero1= 2
+numero2 = 48
+
+	data Ra, numero1
+	data Rb, numero2
+	
+.main:
+	mov Rd, Ra
+	inc Ra
+	inc Ra
+	mov Rd, Ra
+	cmp Rb, Ra
+	jnz .main
+	hlt

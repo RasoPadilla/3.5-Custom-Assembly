@@ -1,0 +1,49 @@
+ ;Programa 8
+DISPLAY_MODE = LCD_CMD_DISPLAY | LCD_CMD_DISPLAY_ON | LCD_CMD_DISPLAY_CURSOR | LCD_CMD_DISPLAY_CURSOR_BLINK
+lcc #LCD_INITIALIZE
+lcc #DISPLAY_MODE
+
+
+.start:	
+	clra
+  	lcc #LCD_CMD_CLEAR
+	mov Ra, 32
+	mov Rd, Ra
+	jnz .main
+	hlt
+	
+.main:
+	mov Rb, 6
+	sub Ra
+	tst Ra
+	jz .par
+	jn .impar
+	jnz .main
+	hlt
+
+.par: 
+  data Ra, textopar
+  call printStr
+  hlt
+  
+.impar: 
+  data Ra, textoimpar
+  call printStr
+  hlt
+
+textopar: #str "Es multiplo de 6\0"
+	
+textoimpar: #str "No es multiplo\0"
+	
+printStr:
+  mov Rc, Ra
+  .nextChar:
+    lod Ra, Rc
+    tst Ra
+	jz ret
+    lcd Ra
+	inc Rc
+    jmp .nextChar
+
+ret:
+	ret

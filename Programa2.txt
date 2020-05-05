@@ -1,0 +1,15 @@
+ ;Programa 2
+numero1= 7
+numero2 = 51
+
+	data Ra, numero1
+	data Rb, numero2
+	
+.main:
+	mov Rd, Ra
+	inc Ra
+	inc Ra
+	mov Rd, Ra
+	cmp Rb, Ra
+	jnz .main
+	hlt
